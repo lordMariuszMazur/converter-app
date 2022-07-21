@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Delete</h1>
+<form action="" method="post">{% csrf_token %}
+    <p>Please make sure to delete: "{{ article.title }}" !</p>
+    <button button type="submit" class="btn btn-danger ml-2">Confirm</button>
+    <a href="{% url 'article_list' %}" button type="button" class="btn btn-warning">No, thanks</a>
+</form>
+{% endblock content %}
